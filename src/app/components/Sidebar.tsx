@@ -41,7 +41,7 @@ export default function Sidebar() {
   return (
     <aside className="w-72 bg-white h-full border-r border-gray-100 flex flex-col pt-6 flex-shrink-0 relative overflow-y-auto modern-scrollbar">
       <div className="px-8 pb-6 flex items-center">
-        <img src="/eatyl-logo.svg" alt="Estyl logo" className="w-7 h-7 object-contain" />
+        <img src={`${import.meta.env.BASE_URL}eatyl-logo.svg`} alt="Estyl logo" className="w-7 h-7 object-contain" />
       </div>
 
       <nav className="flex-1 px-4 space-y-1">

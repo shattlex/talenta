@@ -47,13 +47,14 @@ export default function Home() {
   const monthCells = buildMonthCells(calendarYear, calendarMonthIndex);
   const monthName = now.toLocaleString("ru-RU", { month: "long" });
   const monthTitle = `${monthName.charAt(0).toUpperCase()}${monthName.slice(1)} ${calendarYear}`;
+  const todayLabel = now.toLocaleDateString("ru-RU", { day: "numeric", month: "long" });
 
   return (
     <div className="max-w-[1400px] mx-auto grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_320px] gap-6 pb-10">
       <div className="space-y-6">
         <section className="rounded-[28px] bg-gradient-to-r from-[#fdeff1] via-[#fff5f3] to-[#fbfbfb] border border-[#f4e7ea] px-8 py-7">
           <h2 className="text-[40px] leading-[1.05] font-extrabold text-[#E61730] tracking-tight">Доброе утро, Дмитрий</h2>
-          <p className="mt-2 text-[15px] text-slate-500">Сегодня: 21 июня. У вас 2 встречи и 3 новых уведомления.</p>
+          <p className="mt-2 text-[15px] text-slate-500">Сегодня: {todayLabel}. У вас 2 встречи и 3 новых уведомления.</p>
         </section>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
