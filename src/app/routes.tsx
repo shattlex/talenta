@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate, useRouteError } from "react-router";
+import { createHashRouter, Navigate, useRouteError } from "react-router";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -28,7 +28,7 @@ function RootErrorBoundary() {
   return <Navigate to="/" replace />;
 }
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: Layout,
